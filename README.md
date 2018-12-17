@@ -1,4 +1,3 @@
-# docker-compose-nginx-proxy
 Customized Docker Compose template for nginx proxy. Create virtual hosts and SSL certificates automatically for other projects.
 Contains the following Docker images:
 
@@ -6,7 +5,7 @@ Contains the following Docker images:
 - [jrcs/letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)
 
 
-## Usage
+# Usage
 Create an external network, so other Docker containers can make use of it:
 
 ```
