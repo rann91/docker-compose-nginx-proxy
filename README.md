@@ -1,30 +1,31 @@
-Customized Docker Compose template for nginx proxy. Create virtual hosts and SSL certificates automatically for other projects.
+Customized Docker Compose template for nginx proxy. Create virtual hosts and SSL certificates automatically for your Docker projects.
+
 Contains the following Docker images:
 
 - [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy)
 - [jrcs/letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)
 
 
-# Usage
-Create an external network, so other Docker containers can make use of it:
+# Getting started
+Create an external network in Docker:
 
 ```
 docker network create nginx-proxy
 ```
 
-Copy the default .env file and set the COMPOSE_PROJECT_NAME.
+Copy the default .env file and configure environment variables.
 
 ```
 cp .env.default .env
 ```
 
-Run docker-compose to start the service containers:
+Run docker-compose to start containers:
 
 ```
 docker-compose up -d
 ```
 
-When you want to use the nginx proxy with other Docker Compose projects, add the following network configuration:
+When you want to use the nginx proxy inside other Docker Compose projects, add the following network configuration to your `docker-compose.yml`-file:
 
 ```
 networks:
