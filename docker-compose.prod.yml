@@ -1,1 +1,7 @@
+version: "3"
 
+services:
+  server:
+    environment:
+      - LETSENCRYPT_HOST=${VIRTUAL_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
