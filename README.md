@@ -25,6 +25,12 @@ Run docker-compose to start containers:
 docker-compose up -d
 ```
 
+To run nginx-proxy with Letsencrypt:
+
+```
+docker-compose up -f docker-compose.yml -f docker-compose.prod.yml -d
+```
+
 When you want to use the nginx proxy inside other Docker Compose projects, add the following network configuration to your `docker-compose.yml`-file:
 
 ```
