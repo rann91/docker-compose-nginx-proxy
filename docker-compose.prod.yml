@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  ssl:
+    container_name: nginx-proxy-ssl
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./custom.conf:/etc/nginx/conf.d/custom.conf
+      - ./data/html:/usr/share/nginx/html
+      - ./data/vhost.d:/etc/nginx/vhost.d
+      - ./data/certs:/etc/nginx/certs:rw
