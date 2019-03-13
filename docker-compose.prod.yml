@@ -10,4 +10,5 @@ services:
       - ./custom.conf:/etc/nginx/conf.d/custom.conf
       - ./data/html:/usr/share/nginx/html
       - ./data/vhost.d:/etc/nginx/vhost.d
+      - ./data/dhparam:/etc/nginx/dhparam
       - ./data/certs:/etc/nginx/certs:rw
